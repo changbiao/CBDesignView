@@ -22,7 +22,7 @@ pod "CBDesignView"
 
 ## Author
 
-changbiao, 5.5.5.b.i.a.o@163.com
+changbiao
 
 ## License
 
