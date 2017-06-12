@@ -1,0 +1,6 @@
+framework module CBDesignView {
+  umbrella header "CBDesignView-umbrella.h"
+
+  export *
+  module * { export * }
+}

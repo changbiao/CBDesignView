@@ -1,0 +1,27 @@
+PODS:
+  - CBDesignView (0.1.0):
+    - Masonry
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - Masonry (1.0.2)
+
+DEPENDENCIES:
+  - CBDesignView (from `../`)
+  - FBSnapshotTestCase
+  - Masonry
+
+EXTERNAL SOURCES:
+  CBDesignView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CBDesignView: 34ea00572001d00c75fe6fa859eea7fb8702c4a4
+  FBSnapshotTestCase: '094f9f314decbabe373b87cc339bea235a63e07a'
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+
+PODFILE CHECKSUM: 754ff34d34d0798df2660e176f4a67ecf8623cdc
+
+COCOAPODS: 1.2.1

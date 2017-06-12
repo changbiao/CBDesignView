@@ -20,6 +20,8 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		700CB39D1EEE928B000D4DBC /* CBExampleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 700CB39C1EEE928B000D4DBC /* CBExampleView.m */; };
+		700CB39F1EEE9298000D4DBC /* CBExampleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 700CB39E1EEE9298000D4DBC /* CBExampleView.xib */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		74B0239B1D2528D73ACB5C60 /* Pods_CBDesignView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C459DAFA4F34044B58E46B2 /* Pods_CBDesignView_Example.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
@@ -60,13 +62,17 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		6321A38F7308A97009046333 /* CBDesignView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = CBDesignView.podspec; path = ../CBDesignView.podspec; sourceTree = "<group>"; };
+		6321A38F7308A97009046333 /* CBDesignView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CBDesignView.podspec; path = ../CBDesignView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		700CB39B1EEE928B000D4DBC /* CBExampleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBExampleView.h; sourceTree = "<group>"; };
+		700CB39C1EEE928B000D4DBC /* CBExampleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBExampleView.m; sourceTree = "<group>"; };
+		700CB39E1EEE9298000D4DBC /* CBExampleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CBExampleView.xib; sourceTree = "<group>"; };
+		700CB3A01EEE9580000D4DBC /* CBDesignView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CBDesignView.framework; path = "../../../Library/Developer/Xcode/DerivedData/CBDesignView-hfkoczoznpucgfcmfafnouhoewle/Build/Products/Debug-iphonesimulator/CBDesignView/CBDesignView.framework"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		745C744655C5A3F05F171052 /* Pods-CBDesignView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CBDesignView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CBDesignView_Example/Pods-CBDesignView_Example.release.xcconfig"; sourceTree = "<group>"; };
-		77E5D3401D7161DBF000FD1B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		77E5D3401D7161DBF000FD1B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A37922786BF3D309497B661C /* Pods-CBDesignView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CBDesignView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CBDesignView_Tests/Pods-CBDesignView_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		FC9C75E7223F032271D8912C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		FC9C75E7223F032271D8912C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,7 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				700CB3A01EEE9580000D4DBC /* CBDesignView.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
@@ -132,6 +139,7 @@
 		6003F593195388D20070C39A /* Example for CBDesignView */ = {
 			isa = PBXGroup;
 			children = (
+				700CB39A1EEE9269000D4DBC /* Example */,
 				6003F59C195388D20070C39A /* CBAppDelegate.h */,
 				6003F59D195388D20070C39A /* CBAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -183,6 +191,16 @@
 				77E5D3401D7161DBF000FD1B /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		700CB39A1EEE9269000D4DBC /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				700CB39B1EEE928B000D4DBC /* CBExampleView.h */,
+				700CB39C1EEE928B000D4DBC /* CBExampleView.m */,
+				700CB39E1EEE9298000D4DBC /* CBExampleView.xib */,
+			);
+			path = Example;
 			sourceTree = "<group>";
 		};
 		91453270BF2DA8F55B89CC58 /* Pods */ = {
@@ -283,6 +301,7 @@
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				700CB39F1EEE9298000D4DBC /* CBExampleView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +415,7 @@
 			files = (
 				6003F59E195388D20070C39A /* CBAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* CBViewController.m in Sources */,
+				700CB39D1EEE928B000D4DBC /* CBExampleView.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

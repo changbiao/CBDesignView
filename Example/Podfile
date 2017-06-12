@@ -1,6 +1,7 @@
 use_frameworks!
 
 target 'CBDesignView_Example' do
+  pod 'Masonry'
   pod 'CBDesignView', :path => '../'
 
   target 'CBDesignView_Tests' do
