@@ -88,19 +88,21 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 #import <UIKit/UIKit.h>
- 
+
+
+#if DEBUG
 #define CBPSPDFAssert(expression, ...) \
 do { if(!(expression)) { \
 NSLog(@"%@", [NSString stringWithFormat: @"Assertion failure: %s in %s on line %s:%d. %@", #expression, __PRETTY_FUNCTION__, __FILE__, __LINE__, [NSString stringWithFormat:@"" __VA_ARGS__]]); \
 abort(); }} while(0)
  
 // Compile-time selector checks.
-#if DEBUG
+//#if DEBUG
 #define CB_PROPERTY(propName) NSStringFromSelector(@selector(propName))
-#else
-#define CB_PROPERTY(propName) @#propName
-#endif
- 
+//#else
+//#define CB_PROPERTY(propName) @#propName
+//#endif
+
 // http://www.mikeash.com/pyblog/friday-qa-2010-01-29-method-replacement-for-fun-and-profit.html
 BOOL CBPSPDFReplaceMethodWithBlock(Class c, SEL origSEL, SEL newSEL, id block) {
 //    NSCParameterAssert(c);
@@ -131,11 +133,12 @@ BOOL CBPSPDFReplaceMethodWithBlock(Class c, SEL origSEL, SEL newSEL, id block) {
 }
  
 SEL _CBPSPDFPrefixedSelector(SEL selector) {
-    return NSSelectorFromString([NSString stringWithFormat:@"CBpspdf_%@", NSStringFromSelector(selector)]);
+    return NSSelectorFromString([NSString stringWithFormat:@"cb_pspdf_%@", NSStringFromSelector(selector)]);
 }
  
  
 void CBPSPDFAssertIfNotMainThread(void) {
+    //有疑问？问问我为啥断掉
     CBPSPDFAssert(NSThread.isMainThread, @"\nERROR: All calls to UIKit need to happen on the main thread. You have a bug in your code. Use dispatch_async(dispatch_get_main_queue(), ^{ ... }); if you're unsure what thread you're in.\n\nBreak on CBPSPDFAssertIfNotMainThread to find out where.\n\nStacktrace: %@", NSThread.callStackSymbols);
 }
  
@@ -143,7 +146,7 @@ __attribute__((constructor)) static void CBPSPDFUIKitMainThreadGuard(void) {
     @autoreleasepool {
         for (NSString *selStr in @[CB_PROPERTY(setNeedsLayout), CB_PROPERTY(setNeedsDisplay), CB_PROPERTY(setNeedsDisplayInRect:)]) {
             SEL selector = NSSelectorFromString(selStr);
-            SEL newSelector = NSSelectorFromString([NSString stringWithFormat:@"CBpspdf_%@", selStr]);
+            SEL newSelector = NSSelectorFromString([NSString stringWithFormat:@"cb_pspdf_%@", selStr]);
             if ([selStr hasSuffix:@":"]) {
                 CBPSPDFReplaceMethodWithBlock(UIView.class, selector, newSelector, ^(__unsafe_unretained UIView *_self, CGRect r) {
                     // Check for window, since *some* UIKit methods are indeed thread safe.
@@ -178,6 +181,6 @@ __attribute__((constructor)) static void CBPSPDFUIKitMainThreadGuard(void) {
         }
     }
 }
-
+#endif
 
 

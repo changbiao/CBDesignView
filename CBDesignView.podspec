@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CBDesignView'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'A short description of CBDesignView.'
 
 # This description is used to generate tags and improve search results.
@@ -19,6 +19,7 @@ Pod::Spec.new do |s|
 
   s.description      = <<-DESC
   Use IB_DESIGNABLE & IBInspectable Easy!
+  添加分线程刷新UI时的断言，便于解决问题
                        DESC
 
   s.homepage         = 'https://github.com/changbiao/CBDesignView'
