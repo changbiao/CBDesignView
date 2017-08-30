@@ -40,7 +40,7 @@
     }];
     
 #if DEBUG
-    NSLog(@"[i] DEBUG: %@ %s ", NSStringFromClass([self class]), __func__);
+    //NSLog(@"[i] DEBUG: %@ %s ", NSStringFromClass([self class]), __func__);
 #endif
     
     [self cb_customView];
